@@ -53,7 +53,7 @@ public class ClientController {
 	}
 	
 	@GetMapping("/showFormForUpdate/{id}")
-	public String showFormForUpdate(@PathVariable ( value = "id") long id, Model model) {
+	public String showFormForUpdate(@PathVariable ( value = "id") String id, Model model) {
 		
 
 		Clients client = clientService.getClientById(id);
@@ -63,7 +63,7 @@ public class ClientController {
 	}
 
 	@GetMapping("/clientView/{id}")
-	public String showClient(@PathVariable ( value = "id") long id, Model model) {
+	public String showClient(@PathVariable ( value = "id") String id, Model model) {
 		
 
 		Clients client = clientService.getClientById(id);
@@ -73,7 +73,7 @@ public class ClientController {
 	}
 	
 	@GetMapping("/deleteClient/{id}")
-	public String deleteClient(@PathVariable (value = "id") long id) {
+	public String deleteClient(@PathVariable (value = "id") String id) {
 		
 		this.clientService.deleteClientById(id);
 		return "redirect:/home/viewClients";
@@ -172,7 +172,7 @@ public class ClientController {
     }
 
 	@GetMapping("/showFormForLoanUpdate/{id}")
-	public String showFormForLoanUpdate(@PathVariable ( value = "id") long id, Model model) {
+	public String showFormForLoanUpdate(@PathVariable ( value = "id") String id, Model model) {
 		
 
 		Clients client = clientService.getClientById(id);
