@@ -30,7 +30,7 @@ public class ClientServiceImpl implements ClientService {
 	}
 
 	@Override
-	public Clients getClientById(long id) {
+	public Clients getClientById(String id) {
 		Optional<Clients> optional = clientRepository.findById(id);
 		Clients client = null;
 		if (optional.isPresent()) {
@@ -42,7 +42,7 @@ public class ClientServiceImpl implements ClientService {
 	}
 
 	@Override
-	public void deleteClientById(long id) {
+	public void deleteClientById(String id) {
 		this.clientRepository.deleteById(id);
 	}
 
