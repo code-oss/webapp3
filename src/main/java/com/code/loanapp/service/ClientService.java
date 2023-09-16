@@ -9,7 +9,7 @@ import com.code.loanapp.model.Clients;
 public interface ClientService {
 	List<Clients> getAllClients();
 	void saveClient(Clients client);
-	Clients getClientById(long id);
-	void deleteClientById(long id);
+	Clients getClientById(String id);
+	void deleteClientById(String id);
 	Page<Clients> findPaginated(int pageNo, int pageSize, String sortField, String sortDirection);
 }
