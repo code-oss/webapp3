@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import com.code.loanapp.model.Clients;
 
 @Repository
-public interface ClientRepository extends JpaRepository<Clients, Long>{
+public interface ClientRepository extends JpaRepository<Clients, String>{
 
     
 
