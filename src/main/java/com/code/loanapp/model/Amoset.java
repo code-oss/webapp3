@@ -10,7 +10,7 @@ import java.util.Objects;
 public class Amoset {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long code;
+    private String code;
     private String c_id;
     private String f_name;
     private String location;
@@ -43,11 +43,11 @@ public class Amoset {
         this.profit = profit;
     }
 
-    public long getCode() {
+    public String getCode() {
         return this.code;
     }
 
-    public void setCode(long code) {
+    public void setCode(String code) {
         this.code = code;
     }
 
