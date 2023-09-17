@@ -31,7 +31,7 @@ public class AmosetServiceImpl implements AmosetService {
 	}
 
 	@Override
-	public Amoset getAmosetById(long code) {
+	public Amoset getAmosetById(String code) {
 		Optional<Amoset> optional = amosetRepository.findById(code);
 		Amoset amoset = null;
 		if (optional.isPresent()) {
@@ -43,7 +43,7 @@ public class AmosetServiceImpl implements AmosetService {
 	}
 
 	@Override
-	public void deleteAmosetById(long code) {
+	public void deleteAmosetById(String code) {
 		this.amosetRepository.deleteById(code);
 	}
 
