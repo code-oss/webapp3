@@ -183,7 +183,7 @@ public class ClientController {
 
 
 	@GetMapping("/AmosetView/{code}")
-	public String showAmoset(@PathVariable ( value = "code") long code, Model model) {
+	public String showAmoset(@PathVariable ( value = "code") String code, Model model) {
 		
 
 		Amoset amoset = amosetService.getAmosetById(code);
@@ -192,7 +192,7 @@ public class ClientController {
 		return "ViewAmoset";
 	}
 	@GetMapping("/deleteAmoset/{code}")
-	public String deleteAmoset(@PathVariable (value = "code") long code) {
+	public String deleteAmoset(@PathVariable (value = "code") String code) {
 		
 		this.amosetService.deleteAmosetById(code);
 		return "redirect:/";
