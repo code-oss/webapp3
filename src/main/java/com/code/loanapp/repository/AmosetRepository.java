@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import com.code.loanapp.model.Amoset;
 
 @Repository
-public interface AmosetRepository extends JpaRepository<Amoset, Long>{
+public interface AmosetRepository extends JpaRepository<Amoset, String>{
 
     @Query(value = "SELECT sum(loan_amt) FROM amoset")
     public BigDecimal sumLoan();
