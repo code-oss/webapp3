@@ -27,7 +27,7 @@ public class Amoset {
     public Amoset() {
     }
 
-    public Amoset(long code, String c_id, String f_name, String location, String interest, String loan_amt, String no_years, String month_pay, String total_payment, String status, String amt_pend, String date_e, String profit) {
+    public Amoset(String code, String c_id, String f_name, String location, String interest, String loan_amt, String no_years, String month_pay, String total_payment, String status, String amt_pend, String date_e, String profit) {
         this.code = code;
         this.c_id = c_id;
         this.f_name = f_name;
