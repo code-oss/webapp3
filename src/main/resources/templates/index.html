@@ -67,7 +67,11 @@
 					</li>
 
 					<li class="nav-item">
-						<a th:href="@{/home/dashboard}" class="nav-link"><span class="pcoded-micon"><i class="feather icon-pie-chart"></i></span><span class="pcoded-mtext">Export Data</span></a>
+						<a th:href="@{/export-to-excel-clients}" class="nav-link"><span class="pcoded-micon"><i class="feather icon-pie-chart"></i></span><span class="pcoded-mtext">Export Clients Data</span></a>
+					</li>
+
+					<li class="nav-item">
+						<a th:href="@{/export-to-excel-transactions}" class="nav-link"><span class="pcoded-micon"><i class="feather icon-pie-chart"></i></span><span class="pcoded-mtext">Export Transactions Data</span></a>
 					</li>
 					<li class="nav-item pcoded-hasmenu">
 						<a style="cursor:pointer;" class="nav-link"><span class="pcoded-micon"><i class="feather icon-lock"></i></span><span class="pcoded-mtext">Collective Data</span></a>
@@ -121,15 +125,15 @@
 							<i class="icon feather icon-settings"></i>
 						</a>
 						<div class="dropdown-menu dropdown-menu-right profile-notification">
-							<div class="pro-head"th:each="adminModels : ${adminModels}">
+							<div class="pro-head">
 								<img src="../assets/images/user/user.png" class="img-radius" alt="User-Profile-Image">
-								<span style="text-transform: capitalize;">Welcome , [[${adminModels.mynames}]]</span>
+								<span style="text-transform: capitalize;">Welcome , Administrator</span>
 								<a th:href="@{/home/logout}" class="dud-logout" title="Logout">
 									<i class="feather icon-log-out"></i>
 								</a>
 							</div>
 							<ul class="pro-body">
-								<li><a  class="dropdown-item"><i class="feather icon-settings"></i> Profile Settings</a></li>
+								<li><a th:href="@{/access_admin}" class="dropdown-item"><i class="feather icon-settings"></i> Profile Settings</a></li>
 								<li><a th:href="@{/home/logout}" class="dropdown-item"><i class="feather icon-lock"></i> Logout</a></li>
 							</ul>
 						</div>
@@ -152,8 +156,8 @@
 								<div class="page-block">
 									<div class="row align-items-center">
 										<div class="col-md-12">
-											<div class="page-header-title" th:each="adminModels : ${adminModels}">
-												<h5>Welcome , [[${adminModels.mynames}]]</h5>
+											<div class="page-header-title" >
+												<h5>Welcome , Administrator</h5>
 											</div>
 											<ul class="breadcrumb">
 												<li class="breadcrumb-item"><a th:href="@{/home/dashboard}"><i class="feather icon-home"></i></a></li>
