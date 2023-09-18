@@ -10,10 +10,10 @@ import com.code.loanapp.model.AdminModel;
 
 @Repository
 public interface AdminModelRep extends JpaRepository<AdminModel ,Long> {
-    @Query("from admin_model where username=?1")
+    	@Query("from admin_model where username=?1")
 	public List<AdminModel> findByID(String username);
 	
 	@Query("from admin_model where username=?1 and password=?2")
-    public AdminModel findAdminByUsernamePassword(String username,String password);
+    	public AdminModel findAdminByUsernamePassword(String username,String password);
     
 }
