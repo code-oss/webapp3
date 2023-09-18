@@ -147,7 +147,7 @@ public class Amoset {
         this.profit = profit;
     }
 
-    public Amoset code(long code) {
+    public Amoset code(String code) {
         setCode(code);
         return this;
     }
